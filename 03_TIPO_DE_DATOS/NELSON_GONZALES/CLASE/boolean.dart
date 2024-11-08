@@ -6,6 +6,6 @@ void main() {
   print(esMayorDeEdad);
 
   //infiere el tipo de dato
-final valor1 = true;
+  final valor1 = true;
 
 }
