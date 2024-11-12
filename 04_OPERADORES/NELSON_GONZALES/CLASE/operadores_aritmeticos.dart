@@ -29,4 +29,39 @@ void main() {
   /// código dart ${1+1} 
   /// 
   print("El resultado de la suma es ${ variable1 + variable2}");
+
+    /// Operar el string
+  /// Dart todo es un objeto
+  /// String también va a ser un objeto
+  // Cuanto caracteres ocupa un string
+  print(mensaje2.length); // 10
+
+  print(mensaje2.substring(1)); //ola Mundo
+  print(mensaje2.substring(1,4)); // ola
+
+  print(mensaje2.split(""));
+
+  final varialble3 =11;
+  final varialble4 =110;
+
+  final resta = varialble3 - varialble4;
+  print(resta);
+
+
+  final varialble5 =10;
+  final varialble6 =2;
+
+  final multiplicacion = varialble5 * varialble6;
+  print(multiplicacion);
+print("--------------");
+  final varialble7 =157;
+  final varialble8 =2;
+
+  final division = varialble7 / varialble8;
+  final module = varialble7 % varialble8;
+  final entero = varialble7 ~/ varialble8;
+  print(division);
+  print(module);
+  print(entero);
+
 }
