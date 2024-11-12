@@ -31,6 +31,11 @@ void main() {
   final variableX = variablePatito as double;
   print(variableX);
 
+  final variableString = variableX.toString();
+
+  // [20.2] -> double
+  // ["20.2"] -> String
+
   // final variableY = variablePatito as String;
   // print(variableY);
 
