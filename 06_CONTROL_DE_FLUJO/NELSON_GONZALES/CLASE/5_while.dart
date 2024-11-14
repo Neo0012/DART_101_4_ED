@@ -7,6 +7,7 @@ void main() {
   /// while(condición) {
   ///  operación
   /// }
+  /*
 
   int i = 0;
 
@@ -26,7 +27,6 @@ void main() {
   // El valor es: 1
   //  -----
   // El valor es 10
-
   print("ingrese el valor");
   final valorConsola = stdin.readLineSync();
   final numero = int.tryParse(valorConsola ?? "");
@@ -39,6 +39,7 @@ void main() {
   } else {
     print("el valor no es un numero");
   }
+  */
 
   /// Ejercicio con el ciclo While
   /// ingresar un valor por consola e imprimir la tabla de multiplicar de ese número hasta el 10
@@ -49,4 +50,14 @@ void main() {
   /// 5 * 3 = 15
   /// 5 * 4 = 20
   /// 5 * 5 = 25 ... etc
+  /// 
+  print("Ingrese un número para calcular su tabla de multiplicar:");
+  final valorConsola = stdin.readLineSync();
+  final numero = int.tryParse(valorConsola ?? "") ?? 1;
+
+  int contador = 0;
+  while (contador <= numero) {
+    print("$numero * $contador = ${numero * contador}");
+    contador++;
+  }
 }
