@@ -44,13 +44,15 @@ void main() {
   // adolescente -> 12-28 años
   // adulto -> 28 - 63 años
   // adulto mayor -> mayor a 63 años 
-  print("Ingresa tu edad:");
+
+  print("Ingresa tu edad: ");
 
   // Leer el valor ingresado por el usuario y convertirlo a int
   //int? edad = int.tryParse(stdin.readLineSync() ?? '');
   final datoConsola = stdin.readLineSync() ?? '';
   final edad = int.tryParse(datoConsola);
 
+  // Condicionales
   if (edad == null || edad < 0) {
     print("Entrada inválida. Por favor, ingresa una edad válida.");
   } else if (edad <= 1) {
