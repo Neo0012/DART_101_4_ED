@@ -55,7 +55,7 @@ void main() {
   final valorConsola = stdin.readLineSync();
   final numero = int.tryParse(valorConsola ?? "") ?? 1;
 
-  int contador = 0;
+  int contador = 1;
   while (contador <= numero) {
     print("$numero * $contador = ${numero * contador}");
     contador++;
