@@ -23,7 +23,6 @@ import 'dart:math';
 double calcularAreaCirculo({required double radio}) {
   return pi * pow(radio, 2);
 }
-
 // Función para calcular el volumen de un cilindro
 double calcularVolumenCilindro({required double radio, required double altura}) {
   // Utilizo la función calcularAreaCirculo para realizar la operación pi*radio^2
@@ -32,7 +31,7 @@ double calcularVolumenCilindro({required double radio, required double altura}) 
 }
 
 /// TAREA 2
-
+// Método 1
 // Función para convertir un número decimal a binario (xxx..toRadixString(2)--> 2 representa la base)
 String convertirDecimalABinario({required int numeroDecimal}) {
   return numeroDecimal.toRadixString(2);
@@ -61,6 +60,7 @@ String convertirDecimalABinarioDivisiones({required int numeroDecimal}) {
 int convertirBinarioADecimal({required String numeroBinario}) {
   return int.parse(numeroBinario, radix: 2);
 }
+// Método 2
 // Función para convertir binario a decimal
 int convertirBinarioADecimal2(String binario) {
   int decimal = 0;
