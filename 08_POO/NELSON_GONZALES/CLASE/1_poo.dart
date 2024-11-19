@@ -1,24 +1,57 @@
+// POO
+// class -> definir o crear clases
 void main() {
   // objeto -> pepito
   // El objeto es una instancia de la clase usuario
-  final usuario1 = Usuario(
+  final pepito = Usuario(
     nombre: "Pepito",
-    apellido: "Aguilar",
-    password: "1234",
-  );
-  final usuario2 = Usuario(
-    nombre: "Nelson",
-    apellido: "Ortiz",
-    password: "1234",
-  );
-  final usuario3  = Usuario(
-    nombre: "Pedro",
-    apellido: "Picapiedra",
-    password: "1234",
+    apellido: "Apellido 1",
+    contrasena: "1234",
   );
 
+  final richar = Usuario(
+    nombre: "Richar",
+    apellido: "Cangui",
+    contrasena: "2024",
+  );
+
+  /// Usuario vacío
   final vacio = Usuario.vacio();
 
+  final jose = Usuario(
+    contrasena: "contraseña",
+    apellido: "Apellido 2",
+    nombre: "José",
+  );
+
+
+  /// Qué puedo hacer con estos objetos
+  /// Esto es nada escalable
+  // final Map<String, dynamic> pepito2 = {
+  //   "nombre": "Pepito",
+  //   "apellido": "Apellido",
+  //   "contraseña": "1234",
+  // };
+  // print(pepito2["nombre"]);
+
+  // Con una clase
+  print(richar.nombre);
+  print(richar.apellido);
+  print(richar.contrasena);
+
+  // Método
+  richar.iniciarSesion("test@test.com");
+  pepito.iniciarSesion("pepito@test.com");
+
+  // Getter
+  // Mi nombre y apellido
+  final nombreApellido = "${richar.nombre} ${richar.apellido}";
+  print(richar.nombreApellido);
+
+  // Setter
+  richar.actualizarNombre = "Rich";
+  print(richar.nombre);
+  
 }
 
 /// Clase Usuario
@@ -27,40 +60,39 @@ void main() {
 /// Apellido
 /// Contraseña
 /// Método
-/// Iniciar -Sesión
-/// 
-/// ClaseName -> PascalCase
+/// Iniciar Sesión
+///
+/// ClassName -> PascalCase
+
 class Usuario {
   // Atributos
   String nombre;
   String apellido;
-  String password;
+  String contrasena;
 
-  // Constructos -> construye nuestra clase
-  // 2 atributos - argumnetos: posición, nombre
+  // Constructor -> contruye nuestra clase
+  // 2 atributos - argumentos: posición, nombre
   Usuario({
     required this.nombre,
     required this.apellido,
-    required this.password,
+    required this.contrasena,
   });
-  
-  // Otro constructor por nombre
-  Usuario.vacio({
-    this.nombre = "",
-    this.apellido = "",
-    this.password = "",
-  });
-  // Métodos -> Opcionales -tipos de datos o resultaods
+
+  // Otro constructor - constructor por nombre
+  Usuario.vacio({this.nombre = "", this.apellido = "", this.contrasena = ""});
+
+  // Métodos - Opcionales  - tipos de datos o resultados
   void iniciarSesion(String email) {
     print("Inicia sesión con el email: $email");
   }
 
-  // Getters - Setters -> Opcionales
-  // Getters -> acceder a los datos dentro de la clase
+  // Getters - Setters - Opcional
+  // Getters -> acceder a los datos dentro de la clase - get
   String get nombreApellido => "$nombre $apellido";
-  // Setters -> editar los valores de la clase
-  // Solo actualiza algo de la clase
-  set actualizarNombre (String value) {
+
+  // Setters -> editar los valores de la clase -> set
+  // Solo actualiza algo dentro de la clase
+  set actualizarNombre(String value) {
     nombre = value;
   }
 }
