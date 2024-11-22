@@ -1,4 +1,3 @@
-import '../../00_RESOURCES/CODIGO/2_herencias.dart';
 
 void main() {
   //Clase Mascota es una clase
